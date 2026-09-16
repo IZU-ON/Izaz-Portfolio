@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      // Defend against sandboxed environment or polyfills attempting to set window.fetch
+      try {
+        var _fetch = window.fetch;
+        Object.defineProperty(window, 'fetch', {
+          get: function() { return _fetch; },
+          set: function(fn) { _fetch = fn; },
+          configurable: true,
+          enumerable: true
+        });
+      } catch (e) {
+        // Continue safely
+      }
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IZAZ AHAMAD - 3D Interactive Garage Portfolio</title>
+    <meta name="description" content="Professional minimalist engineering portfolio for Izaz Ahamad featuring 3 core roles with direct links, core software stack, engineering team, and direct contact channels." />
+    <meta property="og:title" content="IZAZ AHAMAD - 3D Interactive Garage Portfolio" />
+    <meta property="og:description" content="Professional minimalist engineering portfolio for Izaz Ahamad featuring 3 core roles with direct links, core software stack, engineering team, and direct contact channels." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  </head>
+  <body class="bg-[#0c0d10] text-[#e2e8f0] font-sans antialiased overflow-x-hidden selection:bg-amber-500/30 selection:text-amber-200">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
